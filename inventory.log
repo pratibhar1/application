@@ -23315,3 +23315,658 @@ Traceback (most recent call last):
   File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
     raise errorclass(errno, errval)
 IntegrityError: (1452, u'Cannot add or update a child row: a foreign key constraint fails (`inventory`.`book_allocation`, CONSTRAINT `book_allocation_ibfk_2` FOREIGN KEY (`employeeId`) REFERENCES `employee` (`employeeId`))')
+2019-05-05 13:24:55,670 - Book - INFO - Entered into Book GET method
+2019-05-05 13:24:55,757 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:24:55,760 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'employeeId' at row 1")
+2019-05-05 13:24:55,788 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:24:55,789 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'book_id' at row 1")
+2019-05-05 13:24:55,805 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:24:55,861 - RequestingBook - INFO - Exiting from RequestingBook POST method
+2019-05-05 13:24:55,924 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:24:55,927 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: 'six eight two' for column 'employeeId' at row 1")
+2019-05-05 13:24:55,951 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:24:55,954 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (1452, u'Cannot add or update a child row: a foreign key constraint fails (`inventory`.`book_allocation`, CONSTRAINT `book_allocation_ibfk_2` FOREIGN KEY (`employeeId`) REFERENCES `employee` (`employeeId`))')
+2019-05-05 13:29:21,562 - Book - INFO - Entered into Book GET method
+2019-05-05 13:29:21,605 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:29:21,607 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'employeeId' at row 1")
+2019-05-05 13:29:21,625 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:29:21,627 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'book_id' at row 1")
+2019-05-05 13:29:21,641 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:29:21,753 - RequestingBook - INFO - Exiting from RequestingBook POST method
+2019-05-05 13:29:21,786 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:29:21,789 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: 'six eight two' for column 'employeeId' at row 1")
+2019-05-05 13:29:21,812 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:29:21,815 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (1452, u'Cannot add or update a child row: a foreign key constraint fails (`inventory`.`book_allocation`, CONSTRAINT `book_allocation_ibfk_2` FOREIGN KEY (`employeeId`) REFERENCES `employee` (`employeeId`))')
+2019-05-05 13:32:08,460 - Book - INFO - Entered into Book GET method
+2019-05-05 13:32:08,500 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:32:08,503 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'employeeId' at row 1")
+2019-05-05 13:32:08,526 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:32:08,528 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'book_id' at row 1")
+2019-05-05 13:32:08,546 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:32:08,628 - RequestingBook - INFO - Exiting from RequestingBook POST method
+2019-05-05 13:32:08,645 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:32:08,736 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: 'six eight two' for column 'employeeId' at row 1")
+2019-05-05 13:32:08,755 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:32:08,759 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (1452, u'Cannot add or update a child row: a foreign key constraint fails (`inventory`.`book_allocation`, CONSTRAINT `book_allocation_ibfk_2` FOREIGN KEY (`employeeId`) REFERENCES `employee` (`employeeId`))')
+2019-05-05 13:35:32,134 - Book - INFO - Entered into Book GET method
+2019-05-05 13:35:32,177 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:35:32,178 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'employeeId' at row 1")
+2019-05-05 13:35:32,200 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:35:32,203 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'book_id' at row 1")
+2019-05-05 13:35:32,223 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:35:32,342 - RequestingBook - INFO - Exiting from RequestingBook POST method
+2019-05-05 13:35:32,384 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:35:32,390 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: 'six eight two' for column 'employeeId' at row 1")
+2019-05-05 13:35:32,411 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:35:32,441 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (1452, u'Cannot add or update a child row: a foreign key constraint fails (`inventory`.`book_allocation`, CONSTRAINT `book_allocation_ibfk_2` FOREIGN KEY (`employeeId`) REFERENCES `employee` (`employeeId`))')
+2019-05-05 13:41:07,832 - Book - INFO - Entered into Book GET method
+2019-05-05 13:41:07,888 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:41:07,891 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'employeeId' at row 1")
+2019-05-05 13:41:07,914 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:41:07,917 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: '' for column 'book_id' at row 1")
+2019-05-05 13:41:07,936 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:41:07,990 - RequestingBook - INFO - Exiting from RequestingBook POST method
+2019-05-05 13:41:08,026 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:41:08,032 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+InternalError: (1366, u"Incorrect integer value: 'six eight two' for column 'employeeId' at row 1")
+2019-05-05 13:41:08,069 - RequestingBook - INFO - Entered into RequestingBook POST method
+2019-05-05 13:41:08,073 - flask.app - ERROR - Exception on /requestbook [POST]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask_restful\__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\PRATIBHA\Desktop\application\routes\book.py", line 462, in post
+    cursor.execute(query,(req['employeeId'], req['book_id'], requestedDate, req['status']))
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Python27\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Python27\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Python27\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Python27\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (1452, u'Cannot add or update a child row: a foreign key constraint fails (`inventory`.`book_allocation`, CONSTRAINT `book_allocation_ibfk_2` FOREIGN KEY (`employeeId`) REFERENCES `employee` (`employeeId`))')
