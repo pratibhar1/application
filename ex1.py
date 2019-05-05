@@ -79,7 +79,7 @@ class FlaskTestCase(unittest.TestCase):
 		for rownum in range(1, sh.nrows):
 		    cars = OrderedDict()
 		    row_values = sh.row_values(rownum)
-		    print(row_values)
+		   # print(row_values)
 		    #cars['employeeId'] = row_values[0]
 		    cars['book_id'] = row_values[0]
 		    # cars['count'] = row_values[0]
@@ -92,10 +92,10 @@ class FlaskTestCase(unittest.TestCase):
 		    f.write(j)
 		with open("data1.json") as my_data_file:
 		    my_data = json.load(my_data_file)
-		print(my_data)
+		#print(my_data)
 		for i in my_data:
 			j=i
-			print(j)
+			#print(j)
 
 
 		# for i in data:
