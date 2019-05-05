@@ -49,28 +49,28 @@ class FlaskTestCase(unittest.TestCase):
 
 
 		# for i in data:
-		#try:
-			response = tester.post('http://localhost:5000/requestbook',json=j,content_type='application/json')
-			
-			print(response.status_code)
-			#print(i['employeeId'])
-			assert response.status_code==201
-			# if not j['book_id']
-			# 	print('the book_id is not exist')
-			# elif not j['employeeId']:
-			# 	print('the employeeId is not exist')
-			# elif not j['book_id']:
-			# 	print('the book_id is not exist')
+			try:
+				response = tester.post('http://localhost:5000/requestbook',json=j,content_type='application/json')
+				
+				print(response.status_code)
+				#print(i['employeeId'])
+				self.assertEqual(response.status_code, 201)
+				# if not j['book_id']:
+				# 	print('the book_id is not exist')
+				# elif not j['employeeId']:
+				# 	print('the employeeId is not exist')
+				# elif not j['book_id']:
+				# 	print('the book_id is not exist')
 
-			print('this id is successfully executeed',j)
-		#except:
-			# if not j['book_id']:
-			# 	print('the book_id is not exist')
-			# if not j['employeeId']:
-			print('the employeeId is not exist')
-			#if not j['book_id']:
-			# 	print('the book_id is not exist')
-			print('there is some problem with id',j['book_id'],j['employeeId'])
+				print('this id is successfully executeed',j)
+			except:
+				if not j['book_id']:
+					print('the book_id is not exist')
+				if not j['employeeId']:
+					print('the employeeId is not exist')
+				#if not j['book_id']:
+				# 	print('the book_id is not exist')
+				print('there is some problem with id',j['book_id'],j['employeeId'])
 	def test_get_book(self):
 		
 		tester = app.test_client()
@@ -120,28 +120,28 @@ class FlaskTestCase(unittest.TestCase):
 
 
 		# for i in data:
-		#try:
-			response = tester.get('http://localhost:5000/bookgk',query_string={'book_id':j['book_id']},content_type='application/json')
-			print(response)
-			print(response.status_code)
-			#print(i['employeeId'])
-			assert response.status_code==200
-			# if not j['book_id']:
-			# 	print('the book_id is not exist')
-			# elif not j['employeeId']:
-			# 	print('the employeeId is not exist')
-			# elif not j['book_id']:
-			# 	print('the book_id is not exist')
+			try:
+				response = tester.get('http://localhost:5000/book',query_string={'book_id':j['book_id']},content_type='application/json')
+				print(response)
+				print(response.status_code)
+				#print(i['employeeId'])
+				self.assertEqual(response.status_code, 200)
+				if not j['book_id']:
+					print('the book_id is not exist')
+				elif not j['employeeId']:
+					print('the employeeId is not exist')
+				elif not j['book_id']:
+					print('the book_id is not exist')
 
-		# 	print('this id is successfully executeed',j)
-		# #except:
-		# 	if not j['book_id']:
-		# 		print('the book_id is not exist')
-		# 	if not j['employeeId']:
-		# 		print('the employeeId is not exist')
-		# 	if not j['book_id']:
-		# 		print('the book_id is not exist')
-		# 	print('there is some problem with id',j)
+				print('this id is successfully executeed',j)
+			except:
+				if not j['book_id']:
+					print('the book_id is not exist')
+				if not j['employeeId']:
+					print('the employeeId is not exist')
+				if not j['book_id']:
+					print('the book_id is not exist')
+				print('there is some problem with id',j)
 
 
 
