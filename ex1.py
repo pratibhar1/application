@@ -126,21 +126,21 @@ class FlaskTestCase(unittest.TestCase):
 			print(response.status_code)
 			#print(i['employeeId'])
 			self.assertEqual(response.status_code, 200)
-			# if not j['book_id']:
-			# 	print('the book_id is not exist')
-			# elif not j['employeeId']:
-			# 	print('the employeeId is not exist')
-			# elif not j['book_id']:
-			# 	print('the book_id is not exist')
+			if not j['book_id']:
+				print('the book_id is not exist')
+			elif not j['employeeId']:
+				print('the employeeId is not exist')
+			elif not j['book_id']:
+				print('the book_id is not exist')
 
 			print('this id is successfully executeed',j)
 		#except:
-			# if not j['book_id']:
-			# 	print('the book_id is not exist')
-			# if not j['employeeId']:
-			# 	print('the employeeId is not exist')
-			#if not j['book_id']:
-			# 	print('the book_id is not exist')
+			if not j['book_id']:
+				print('the book_id is not exist')
+			if not j['employeeId']:
+				print('the employeeId is not exist')
+			if not j['book_id']:
+				print('the book_id is not exist')
 			print('there is some problem with id',j)
 
 
