@@ -99,18 +99,18 @@ class FlaskTestCase(unittest.TestCase):
 
 
 		# for i in data:
-			try:
-				response = tester.get('http://localhost:5000/book',query_string={'book_id':j['book_id']},content_type='application/json')
-				print(response)
-				print(response.status_code)
-				#print(i['employeeId'])
-				self.assertEqual(response.status_code, 200)
-				
-				print('this id is successfully executeed',j)
-			except:
-				if not j['book_id']:
-					print('the book_id is not exist')
-				print('there is some problem with id',j)
+		#try:
+			response = tester.get('http://localhost:5000/book',query_string={'book_id':j['book_id']},content_type='application/json')
+			print(response)
+			print(response.status_code)
+			#print(i['employeeId'])
+			self.assertEqual(response.status_code, 200)
+			
+			print('this id is successfully executeed',j)
+		# except:
+		# 	if not j['book_id']:
+		# 		print('the book_id is not exist')
+		# 	print('there is some problem with id',j)
 
 
 
