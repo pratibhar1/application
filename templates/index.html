@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+table, td, th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+<p>Inventories Upcoming Expiry Dates are</p>
+    <table >
+            <th>asset</th>
+            <th>device</th>
+            <th>brand</th>
+            <th>Expriy Date</th>
+                    {% for date in value  %}
+                        <tr >
+                            <td> {{date[0]}} </td>
+                            <td> {{date[1]}} </td>
+                            <td> {{date[2]}} </td>
+                            <td> {{date[3]}} </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+</body>
+
+</html>
