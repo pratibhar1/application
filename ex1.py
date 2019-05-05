@@ -11,11 +11,6 @@ import simplejson as json
 
 class FlaskTestCase(unittest.TestCase):
 
-
-
-
-
-
 	
 	def test_post_requestbook(self):
 		
@@ -74,23 +69,7 @@ class FlaskTestCase(unittest.TestCase):
 	def test_get_book(self):
 		
 		tester = app.test_client()
-		# data= [
-		# 	{
-		# "employeeId":509,
-		# 			"book_id":1,
-		# 			"status":"11"
-		# },
-		# {
-		# 	"employeeId":714,
-		# 			"book_id":2
-		# },
-		# {
-		# 	"employeeId":680,
-		# 			"book_id":2
-		# }
-
-		# ]
-		# print(data)
+		
 		#Open the workbook and select the first worksheet
 		wb = xlrd.open_workbook('testbook1.xlsx')
 		sh = wb.sheet_by_index(0)
