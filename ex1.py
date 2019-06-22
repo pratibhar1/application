@@ -66,54 +66,7 @@ class FlaskTestCase(unittest.TestCase):
 				#if not j['book_id']:
 				# 	print('the book_id is not exist')
 				print('there is some problem with id',j['book_id'],j['employeeId'])
-	def test_get_book(self):
-		
-		tester = app.test_client()
-		
-		#Open the workbook and select the first worksheet
-		wb = xlrd.open_workbook('testbook1.xlsx')
-		sh = wb.sheet_by_index(0)
-		# List to hold dictionaries
-		cars_list = []
-		# Iterate through each row in worksheet and fetch values into dict
-		for rownum in range(1, sh.nrows):
-		    cars = OrderedDict()
-		    row_values = sh.row_values(rownum)
-		   # print(row_values)
-		    #cars['employeeId'] = row_values[0]
-		    cars['book_id'] = row_values[0]
-		    # cars['count'] = row_values[0]
-		    # cars['page'] = row_values[1]
-		    cars_list.append(cars)
-		# Serialize the list of dicts to JSON
-		j = json.dumps(cars_list)
-		# Write to file
-		with open('data1.json', 'w') as f:
-		    f.write(j)
-		with open("data1.json") as my_data_file:
-		    my_data = json.load(my_data_file)
-		#print(my_data)
-		for i in my_data:
-			j=i
-			#print(j)
-
-
-		# for i in data:
-		#try:
-			response = tester.get('http://localhost:5000/book',query_string={'book_id':j['book_id']},content_type='application/json')
-			print(response)
-			print(response.status_code)
-			#print(i['employeeId'])
-			self.assertEqual(response.status_code, 200)
-			
-			print('this id is successfully executeed',j)
-		# except:
-		# 	if not j['book_id']:
-		# 		print('the book_id is not exist')
-		# 	print('there is some problem with id',j)
-
-
-
+	
 
 
 if __name__=='__main__':
